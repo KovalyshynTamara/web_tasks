@@ -3,19 +3,77 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Sport</title>
   </head>
   <body class="montserrat">
+    <div class="mobile-header flex">
+      <div>
+        <a href="#" class="logo mobile-logo">
+          <img src="images/canoe.svg" alt="Logo">
+        </a>
+      </div>
+      
+      <div class="hmb-wrap" id="hmb-wrap">
+        <button type="button" id="hamb-btn" class="hamburger" onclick="toggleMenu()">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile_menu">
+      <nav class="mobile_menu_list">
+        <ul>
+          <li>
+            <img src="images/main.svg" alt="">  
+            <a href="index.html">Main</a>
+          </li>
+          <li class="has-dropdown">
+            <img src="images/matches.svg" alt=""> 
+            <a href="#">Matches</a>
+            <button class="dropdown-toggle btn" onclick="toggleDropdown(this)">
+              <span class="chevron bottom"></span>
+            </button>
+             <ul class="mobile_dropdown">
+              <li>
+                <img src="images/calendar.svg" alt=""><a href="#">Calendar</a>
+              </li>
+              <li>
+                <img src="images/game.svg" alt=""><a href="#">Next game</a>
+              </li>
+              <li>
+                <img src="images/raiting.svg" alt=""><a href="#">Raitings</a>
+              </li>
+            </ul>
+            
+          </li>
+          <li>
+            <img src="images/news.svg" alt="">
+            <a href="news.html">News</a>
+          </li>
+          <li>
+            <img src="images/fans.svg" alt=""><a href="#">Fans</a>
+          </li>
+          <li>
+            <img src="images/contact.svg" alt=""><a href="#">Contacts</a>
+          </li>
+          <li>
+            <img src="images/admin.svg" alt=""><a href="#">Admin</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="shadow" onclick="toggleMenu()"></div>
+
     <header id="header">
       <div class="container flex">
         <nav class="main-menu">
           <ul class="flex">
-            <li><a href="#">Main</a></li>
+            <li><a href="index.html">Main</a></li>
             <li><a href="#">Matches</a>
               <ul class="dropdown">
                 <li><a href="#">Calendar</a></li>
@@ -105,5 +163,6 @@
       </div>
       <div class="copy">Copyrights © 2025. Ludmyla Lusan</div>
     </footer>
+    <script src="menu.js"></script>
   </body>
 </html>
