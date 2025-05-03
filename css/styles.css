@@ -510,6 +510,10 @@ section .image img {
 }
 .mobile-header {
   position: fixed;
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: inherit;
+  backdrop-filter: blur(4px);
 }
 .mobile-header .logo {
   margin: 15px 0px 0px 15px;
@@ -709,6 +713,7 @@ section .image img {
     display: block;
     position: fixed;
     right: 0;
+    top: 0;
   }
   .mobile-logo {
     display: block;
