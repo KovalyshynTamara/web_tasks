@@ -1,0 +1,118 @@
+// NEWS PAGE 
+.main {
+  background-color: #dbdbdb6e;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(310px, 1fr));
+  gap: 20px;
+  padding: 0 0 40px;
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f6f6f6;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    &:hover {
+      filter: drop-shadow(0px 5px 11px #7a7171);
+      transition: all 0.7s ease-in-out;
+      transform: translateY(-5px);
+    }
+    .news_img {
+      object-fit: cover;
+      width: 100%;
+      margin-bottom: 30px;
+      height: 240px;
+      display: block;
+      background: url(../images/noimage.png) center / cover #487bb9;
+    }
+    .title{
+      max-width: 250px;
+      width: 100%;
+      padding: 0 20px;
+      align-items: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      height: 68px;
+      text-decoration: none;
+      color: #000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .text {
+      padding: 0 20px;
+      font-size: 1.125rem;
+      margin-bottom: 25px;
+      height: 112px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    > .flex {
+      padding: 0 20px;
+      margin-bottom: 15px;
+      align-items: center;
+      .badge {
+        background: #e3b9e4;
+        padding: 0 15px;
+        line-height: 25px;
+        border-radius: 25px;
+      }
+      .date {
+        color: #675cca;
+        font-size: 14px;
+      }
+    }
+    .more {
+      float: right;
+      padding: 0 50px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+      position: relative;
+      line-height: 26px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        top: -2px;
+        left: 30px;
+        background:#87c5d2;
+        opacity: 0.3;
+        transition: width 0.8s ease-in-out;
+      }
+      &:hover::before {
+        width: 170px;
+        transition: all 0.8s ease-in-out;
+      }
+      .chevron::before {
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        top: 6px;
+        left: -12px;
+        position: relative;
+        vertical-align: top;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+// 🔻 Адаптивність
+@media (max-width: 1200px) {
+  .news {
+    grid-template-columns: repeat(2, minmax(310px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .news {
+    grid-template-columns: 1fr; 
+    padding: 0 15px;
+  }
+}

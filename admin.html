@@ -56,7 +56,7 @@
           <a href="news.html">News</a>
         </li>
         <li>
-          <img src="images/fans.svg" alt=""><a href="fans.html">Fans</a>
+          <img src="images/fans.svg" alt=""><a href="#">Fans</a>
         </li>
         <li>
           <img src="images/contact.svg" alt=""><a href="#">Contacts</a>
@@ -91,67 +91,43 @@
         <a href="index.html">
           <img src="images/logo.png" alt="Logo">
         </a>
-        <div class="ring">
-          <span></span>
-        </div>
-      </div>     
+      </div>
+      
     </div>
   </header>
-  <main class="main">   
-    <div class="container">
-      <h1 class="news_title">News</h1>
-      <div class="news">
-        <div class="card">
-          <img src="images/news_1.jpg" alt="Ludmyla Lusan" class="news_img">
-          <div class="flex">
-            <div class="date">25 серпня 2024, 12:24</div>
-            <div class="badge">Sport</div>
-          </div>
-          <h2 class="title">Людмила Лузан завоювала четверте в кар'єрі "золото" чемпіонату світу з веслування</h2>
-          <p class="text">Перше "золото" України на світовій першості-2024. Олімпійська призерка Людмила Лузан на першому старті після Парижа-2024 виборола "золото". Українка стала чемпіонкою світу-2024 в каное-одиночці на дистанції 500 метрів. Цьогорічний розіграш світової першості проходить 23-25 серпня у Самарканді, Узбекистан. У суботу, 24 серпня "синьо-жовті" здобули першу медаль для України на ЧС-2024 — Юрій Вандюк та Павло Борсук на каное-двійці на дистанції 1000 м вибороли "бронзу".</p>
-          <a class="more"
-            href="https://suspilne.media/sport/821013-ludmila-luzan-zavouvala-cetverte-v-kareri-zoloto-cempionatu-svitu-z-vesluvanna/">
-            <span class="chevron"></span>
-            Read More
-          </a>
-        </div>
-
-        <div class="card">
-          <img src="images/news_3.webp" alt="Ludmyla Lusan" class="news_img">
-          <div class="flex">
-            <div class="date">24 червня 23, 15:06</div>
-            <div class="badge">Sport</div>
-          </div>
-        
-          <h2 class="title">Мультимедалістка Лузан принесла Україні ще одне "золото" Європейських ігор-2023</h2>
-          <p class="text">Збірна України завоювала ще одну медаль Європейських ігор 2023 року, які відбуваються польському
-            Кракові. Володаркою "золота" у веслуванні стала Людмила Лузан. 26-річна уродженка Івано-Франківська тріумфувала у
-            каное-одиночці на дистанції 500 метрів..Українка подолала дистанцію за 2:02,920 хвилини. Другою фінішувала іспанка
-            Марія Корбера (2:03,990), а замкнула трійку призерок Агнес Кісс з Угорщини (2:04,576).</p>
-          <a class="more"
-            href="https://tsn.ua/prosport/multimedalistka-luzan-prinesla-ukrayini-sche-odne-zoloto-yevropeyskih-igor-2023-2356750.html">
-            <span class="chevron"></span>
-            Read More
-          </a>
-        </div>
-        
-        <div class="card">
-          <img src="images/news_2.jpg" alt="Ludmyla Lusan" class="news_img">
-          <div class="flex">
-            <div class="date">9 серпня 2024, 13:53</div>
-            <div class="badge">Sport</div>
-          </div>
-          <h2 class="title">Каноїстки Лузан та Рибачок — срібні призерки Олімпіади-2024 з веслування у двійках</h2>
-          <p class="text">"Золото" з відривом 1.49 секунди виграв човен Китаю. Каноїстки Людмила Лузан і Анастасія Рибачок зійшли на подіум Олімпіади-2024 з веслування на двійках — виграли "срібло" на дистанції 500 метрів. Поновивши спільні виступи в сезоні 2024 року, тандем Лузан і Рибачок підходив до паризьких Ігор у статусі чинних віцечемпіонок Олімпіади. На шляху до фіналу А "синьо-жовті" подолали два раунди: з другого місця кваліфікувалися до півфіналу, де фінішували третіми у своїй групі з четвертим найкращим часом серед усіх човнів.</p>
-          <a class="more" 
-            href="https://suspilne.media/sport/809799-kanoistki-luzan-ta-ribacok-vicecempionki-olimpiadi-2024-z-vesluvanna-na-dvijkah/">
-            <span class="chevron"></span>
-            Read More
-          </a>  
-        </div>
-
-      </div>
+  <main id="main" class="main">
+    <div class="success-message">
+      News published!
     </div>
+    <div class="container">
+      <h2 class="title">Add News</h2>
+        <form action="#" method="get" id="news-form">
+          <div class="form-group">
+            <input type="text" id="news-title" placeholder="" rows="4" cols="50" class="form-control">
+            <label for="news-title" class="form-label">News title</label>
+            <div class="error-message"></div>
+          </div> 
+          
+
+          <div class="form-group">
+            <textarea id="news-content" placeholder="" rows="4" cols="50" class="form-control"></textarea>
+            <label for="news-content" class="form-label">News content</label>
+            <div class="error-message"></div>
+          </div>    
+          
+          
+          <div class="form-group image-group">
+            <input type="file" name="image" id="news-image" accept="image/*"> 
+            <div class="error-message"></div>
+            <div id="image-preview" style="margin-top: 10px;"></div>
+          </div> 
+         
+          <button type="submit" class="btn-submit">Publish</button>
+
+        </form>
+        <div id="news-preview-container"></div>
+    </div>
+    
   </main>
   <footer id="footer">
     <div class="container">
@@ -193,5 +169,8 @@
     <div class="copy">Copyrights © 2025. Ludmyla Lusan</div>
   </footer>
   <script src="menu.js"></script>
+  <script src="admin.js"></script>
+ 
+
 </body>
 </html>
